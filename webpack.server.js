@@ -3,6 +3,7 @@ const webpackNodeExternals = require('webpack-node-externals');
 
 module.exports = {
   target: 'node',
+  mode: 'production',
   entry: './server.js',
   output: {
     filename: 'bunde.js',
@@ -17,12 +18,11 @@ module.exports = {
         exclude: '/node_modules/',
         options: {
           presets: [
-            'react',
-            'stage-0',
+            '@babel/react',
             [
-              'env',
+              '@babel/preset-env',
               {
-                target: {
+                targets: {
                   browsers: ['last 2 versions'],
                 },
               },
