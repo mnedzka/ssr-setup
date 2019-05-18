@@ -18,7 +18,7 @@ app.get('*', (req, res) => {
   const context = {};
 
   const content = ReactDOMServer.renderToString(
-    <StaticRouter location={req.url}>
+    <StaticRouter location={req.url} context={context}>
       <App />
     </StaticRouter>,
   );

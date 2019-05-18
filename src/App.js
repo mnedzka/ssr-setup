@@ -11,11 +11,10 @@ class App extends Component {
           <Route
             path='/'
             render={props => {
-              <Home {...props} />;
+              return <Home {...props} />;
             }}
           />
         </Switch>
-        <Home />
       </div>
     );
   }
